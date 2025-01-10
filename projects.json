@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "nombre": "Portafolio Personal",
+    "descripcion": "Un portafolio interactivo para mostrar proyectos y habilidades profesionales.",
+    "imagen": "https://example.com/images/portafolio.png",
+    "github": "https://github.com/usuario/portafolio-personal",
+    "link": "https://usuario.github.io/portafolio-personal/"
+  },
+  {
+    "id": 2,
+    "nombre": "Gestor de Tareas",
+    "descripcion": "Aplicación web para gestionar tareas con funciones de agregar, editar y eliminar.",
+    "imagen": "https://example.com/images/gestor-tareas.png",
+    "github": "https://github.com/usuario/gestor-tareas",
+    "link": "https://usuario.github.io/gestor-tareas/"
+  },
+  {
+    "id": 3,
+    "nombre": "Tienda en Línea",
+    "descripcion": "Un ecommerce sencillo con carrito de compras y pasarela de pago simulada.",
+    "imagen": "https://example.com/images/tienda-en-linea.png",
+    "github": "https://github.com/usuario/tienda-en-linea",
+    "link": "https://usuario.github.io/tienda-en-linea/"
+  },
+  {
+    "id": 4,
+    "nombre": "Blog Personal",
+    "descripcion": "Plataforma para compartir artículos personales con un diseño minimalista.",
+    "imagen": "https://example.com/images/blog-personal.png",
+    "github": "https://github.com/usuario/blog-personal",
+    "link": "https://usuario.github.io/blog-personal/"
+  },
+  {
+    "id": 5,
+    "nombre": "Juego de Memoria",
+    "descripcion": "Un juego interactivo para mejorar la memoria visual utilizando JavaScript.",
+    "imagen": "https://example.com/images/juego-memoria.png",
+    "github": "https://github.com/usuario/juego-memoria",
+    "link": "https://usuario.github.io/juego-memoria/"
+  },
+  {
+    "id": 6,
+    "nombre": "Clima en Tiempo Real",
+    "descripcion": "Aplicación para consultar el clima actual en cualquier ciudad del mundo.",
+    "imagen": "https://example.com/images/clima-tiempo-real.png",
+    "github": "https://github.com/usuario/clima-tiempo-real",
+    "link": "https://usuario.github.io/clima-tiempo-real/"
+  }
+]
