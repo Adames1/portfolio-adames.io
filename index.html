@@ -19,49 +19,89 @@
             <a href="#" class="logo">
                 <h1>Adames</h1>
             </a>
-            <ul id="nav-menu" class="nav-menu" role="menu" hidden>
+            <ul class="nav-menu">
                 <li class="nav-menu__item">
-                    <a href="#" class="nav-menu__link" role="menuitem">
-                        <i class="uil uil-estate"></i>
-                        <span>Inicio</span>
-                    </a>
+                    <a href="#home" class="nav-menu__link">Home</a>
                 </li>
                 <li class="nav-menu__item">
-                    <a href="#" class="nav-menu__link" role="menuitem">
-                        <i class="uil uil-user"></i>
-                        <span>Sobre mí</span>
-                    </a>
+                    <a href="#about" class="nav-menu__link">About</a>
                 </li>
                 <li class="nav-menu__item">
-                    <a href="#" class="nav-menu__link" role="menuitem">
-                        <i class="uil uil-file-alt"></i>
-                        <span>Habilidades</span>
-                    </a>
+                    <a href="#skills" class="nav-menu__link">Skills</a>
                 </li>
                 <li class="nav-menu__item">
-                    <a href="#" class="nav-menu__link" role="menuitem">
-                        <i class="uil uil-briefcase-alt"></i>
-                        <span>Portafolio</span>
-                    </a>
+                    <a href="#projects" class="nav-menu__link">Projects</a>
                 </li>
                 <li class="nav-menu__item">
-                    <a href="#" class="nav-menu__link" role="menuitem">
-                        <i class="uil uil-envelope-alt"></i>
-                        <span>Contacto</span>
-                    </a>
+                    <a href="#contact" class="nav-menu__link">Contact</a>
                 </li>
             </ul>
-            <button type="button" class="button-menu" aria-label="Abrir menú de navegación" aria-expanded="false"
-                aria-controls="nav-menu">
-                <span class="button-menu__lines">
-                    <span class="button-menu__line"></span>
-                    <span class="button-menu__line"></span>
-                    <span class="button-menu__line"></span>
-                </span>
+            <button type="button" class="button-menu" title="Open menu" aria-label="Toggle navigation menu">
+                <span class="button-menu__line"></span>
+                <span class="button-menu__line"></span>
+                <span class="button-menu__line"></span>
             </button>
         </nav>
     </header>
     <!-- HEADER -->
+
+    <!-- CONTENT MAIN -->
+    <main>
+        <!-- SECTION HERO -->
+        <section id="home" class="section section-home">
+            <div class="container content-home">
+                <svg class="blob-img" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <mask id="mask0" mask-type="alpha">
+                        <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                                        130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                                        97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                                        0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
+                    </mask>
+                    <g mask="url(#mask0)">
+                        <path
+                            d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                                        165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                                        129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                                        -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
+                        <image href="./assets/img/argenis_adames.png" x="5" y="8" alt="Profile Image" />
+                    </g>
+                </svg>
+
+                <!-- Info Section -->
+                <div class="section-home__info">
+                    <h2>Argenis Adames</h2>
+                    <span>Frontend Developer</span>
+                    <div class="section-home__buttons">
+                        <a href="#" class="button button__view">View my work</a>
+                        <a href="#" class="button button__contact">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll Down Button -->
+            <div class="section-home__scrolldown--button">
+                <a href="#" class="scrolldown--button" title="Scroll Down">
+                    <span>Scrolldown</span>
+                    <i class="uil uil-arrow-down"></i>
+                </a>
+            </div>
+        </section>
+        <!-- SECTION HERO -->
+
+        <!-- SECTION ABOUT -->
+        <!-- SECTION ABOUT -->
+
+        <!-- SECTION SKILLS -->
+        <!-- SECTION SKILLS -->
+
+        <!-- SECTION PROJECTS -->
+        <!-- SECTION PROJECTS -->
+
+        <!-- SECTION CONTACT -->
+        <!-- SECTION CONTACT -->
+    </main>
+    <!-- CONTENT MAIN -->
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./assets/js/main.js"></script>
