@@ -84,6 +84,22 @@ body {
   transition: transform 0.3s, background-color 0.3s;
 }
 
+.title {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: var(--font-size-md);
+  color: var(--text-color);
+  letter-spacing: 2px;
+}
+
+.description {
+  font-size: var(--font-size-sm);
+  color: var(--text-color);
+}
+
 /* header styles */
 .header {
   position: fixed;
@@ -244,6 +260,87 @@ nav .logo h1 {
   font-size: var(--font-size-xl);
 }
 
+/* about me styles */
+.content-about,
+.content-skills {
+  display: grid;
+  grid-gap: var(--spacing-md);
+}
+
+.content-about__info,
+.content-skills__info {
+  text-align: center;
+}
+
+.content-about__info .description {
+  margin-top: var(--spacing-md);
+}
+
+.about-social {
+  display: flex;
+  gap: var(--spacing-sm);
+  justify-content: center;
+  margin-top: var(--spacing-sm);
+}
+
+.about-social .about-social__link .uil {
+  font-size: var(--spacing-md);
+  color: var(--text-color);
+  display: block;
+  transition: var(--transition);
+}
+
+.about-img {
+  background-color: var(--color-black);
+  border-radius: 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  overflow: hidden;
+}
+
+.about-img .about-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* skills styles */
+.container-skills {
+  display: grid;
+  grid-gap: var(--spacing-lg);
+}
+
+.technologies-learned h4,
+.technologies-tolearn h4 {
+  font-weight: 500;
+  font-size: var(--font-size-md);
+}
+
+.cards-skills {
+  margin-top: var(--spacing-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.cards-skills .card-skill {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 5px 5px;
+  text-align: center;
+  padding: var(--spacing-sm);
+}
+
+.technologies-tolearn .cards-skills .card-skill {
+  background-color: var(--color-dark-gray);
+}
+
+.cards-skills .card-skill h3 {
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
 /* Modo responsive */
 @media screen and (min-width: 768px) {
   nav {
@@ -280,6 +377,18 @@ nav .logo h1 {
     width: 300px;
     height: 300px;
   }
+
+  .content-about {
+    grid-template-columns: auto auto;
+  }
+
+  .content-about__info .description {
+    text-align: left;
+  }
+
+  .container-skills {
+    grid-template-columns: auto auto;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -295,5 +404,27 @@ nav .logo h1 {
   .blob-img {
     width: 370px;
     height: 370px;
+  }
+
+  .content-about {
+    align-items: center;
+  }
+
+  .content-about__info {
+    max-width: 600px;
+  }
+
+  .about-social .about-social__link:hover .uil {
+    transform: scale(1.1);
+  }
+
+  .container-skills {
+    grid-template-columns: inherit;
+    justify-content: center;
+  }
+
+  .cards-skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
