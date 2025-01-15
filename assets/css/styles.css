@@ -268,7 +268,8 @@ nav .logo h1 {
 }
 
 .content-about__info,
-.content-skills__info {
+.content-skills__info,
+.content-portfolio__info {
   text-align: center;
 }
 
@@ -341,6 +342,55 @@ nav .logo h1 {
   letter-spacing: 2px;
 }
 
+/* projects styles */
+.swiper {
+  width: 260px;
+  height: 100%;
+  margin-top: var(--spacing-xl);
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.swiper-slide__info h3 {
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.swiper-slide__info p {
+  font-size: var(--spacing-sm);
+}
+
+.swiper-slide__info .swiper-slide__info--link {
+  display: flex;
+  place-content: center;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-xs);
+  background-color: #2e59e8;
+  color: var(--color-white);
+  font-size: var(--font-size-sm);
+  border-radius: 8px;
+  padding: var(--spacing-sm);
+  font-weight: 500;
+}
+
 /* Modo responsive */
 @media screen and (min-width: 768px) {
   nav {
@@ -389,6 +439,20 @@ nav .logo h1 {
   .container-skills {
     grid-template-columns: auto auto;
   }
+
+  .swiper {
+    width: 600px;
+  }
+
+  .swiper-slide {
+    text-align: left;
+    flex-direction: row;
+    gap: var(--spacing-md);
+  }
+
+  .swiper-slide__info .swiper-slide__info--link {
+    margin-top: var(--spacing-sm);
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -426,5 +490,17 @@ nav .logo h1 {
   .cards-skills {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .swiper {
+    width: 800px;
+  }
+
+  .swiper-slide__info h3 {
+    font-size: var(--font-size-lg);
+  }
+
+  .swiper-slide__info .swiper-slide__info--link {
+    font-size: var(--font-size-md);
   }
 }
