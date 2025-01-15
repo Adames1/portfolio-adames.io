@@ -269,7 +269,8 @@ nav .logo h1 {
 
 .content-about__info,
 .content-skills__info,
-.content-portfolio__info {
+.content-portfolio__info,
+.content-contact {
   text-align: center;
 }
 
@@ -391,6 +392,76 @@ nav .logo h1 {
   font-weight: 500;
 }
 
+/* contact form styles */
+.content-form {
+  margin-top: var(--spacing-md);
+}
+
+form {
+  width: 100%;
+  display: grid;
+  place-content: center;
+  gap: var(--spacing-sm);
+}
+
+.group-input input,
+.group-input textarea {
+  width: 100%;
+  outline: none;
+  border: 2px solid var(--color-dark-gray);
+  border-radius: 5px;
+  padding: var(--spacing-xs);
+  font-family: var(--font-family);
+}
+
+.group-input input::placeholder,
+.group-input textarea::placeholder {
+  color: var(--color-dark-gray);
+}
+
+.group-input label {
+  display: block;
+  text-align: left;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.button-submit {
+  width: 100%;
+}
+
+/* footer styles */
+footer {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: var(--spacing-sm);
+}
+
+.content-footer {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  text-align: center;
+  gap: var(--spacing-sm);
+}
+
+footer .logo h1 {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+}
+
+.footer-social {
+  display: flex;
+  gap: var(--spacing-sm);
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-social .footer-social__link .uil {
+  font-size: var(--spacing-md);
+  display: block;
+}
+
 /* Modo responsive */
 @media screen and (min-width: 768px) {
   nav {
@@ -453,6 +524,38 @@ nav .logo h1 {
   .swiper-slide__info .swiper-slide__info--link {
     margin-top: var(--spacing-sm);
   }
+
+  .content-form {
+    width: 400px;
+  }
+
+  form {
+    place-content: initial;
+  }
+
+  .group-input input,
+  .group-input textarea {
+    padding: var(--spacing-sm) var(--spacing-xs);
+  }
+
+  .button-submit {
+    padding: var(--spacing-sm);
+    font-size: var(--font-size-md);
+  }
+
+  .content-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+
+  .content-footer__left {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -502,5 +605,9 @@ nav .logo h1 {
 
   .swiper-slide__info .swiper-slide__info--link {
     font-size: var(--font-size-md);
+  }
+
+  .content-form {
+    width: 500px;
   }
 }

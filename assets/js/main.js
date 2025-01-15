@@ -64,4 +64,42 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   uiProjects();
+
+  // script emailjs
+  emailjs.init("3_s2rcpMAsQqb1TFR");
+
+  document
+    .getElementById("myForm")
+    .addEventListener("submit", function (event) {
+      event.preventDefault(); // Evitar recargar la página
+
+      const submitButton = document.querySelector(".button-submit");
+      const originalButtonText = submitButton.textContent;
+
+      submitButton.textContent = "Sending Message...";
+      submitButton.disabled = true;
+
+      emailjs
+        .sendForm("service_y70q27h", "template_hg3o5ol", this)
+        .then((response) => {
+          console.log("SUCCESS!", response.status, response.text);
+
+          submitButton.textContent = "Message Sent";
+          submitButton.style.backgroundColor = "#08a208";
+
+          this.reset();
+
+          setTimeout(() => {
+            submitButton.textContent = originalButtonText;
+            submitButton.disabled = false;
+            submitButton.style.backgroundColor = ""; // Restaurar el color original del botón
+          }, 3000);
+        })
+        .catch((error) => {
+          console.log("FAILED...", error);
+
+          submitButton.textContent = originalButtonText;
+          submitButton.disabled = false;
+        });
+    });
 });

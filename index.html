@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
 </head>
 
 <body>
@@ -16,7 +18,7 @@
     <!-- HEADER -->
     <header class="header">
         <nav class="container">
-            <a href="#" class="logo">
+            <a href="#home" class="logo">
                 <h1>Adames</h1>
             </a>
             <ul class="nav-menu">
@@ -193,9 +195,60 @@
         <!-- SECTION PROJECTS -->
 
         <!-- SECTION CONTACT -->
+        <section id="contact" class="section section-contact">
+            <div class="container content-contact">
+                <div class="content-contact__info">
+                    <h2 class="title">Get In Touch</h2>
+                    <span class="subtitle">At your disposal</span>
+                </div>
+                <div class="content-form">
+                    <form id="myForm">
+                        <div class="group-input">
+                            <label for="name">Your name</label>
+                            <input type="text" name="name" id="name" placeholder="Type your name..." required>
+                        </div>
+                        <div class="group-input">
+                            <label for="email">Your email</label>
+                            <input type="email" name="email" id="email" placeholder="Type your email..." required>
+                        </div>
+                        <div class="group-input">
+                            <label for="message">Your message</label>
+                            <textarea name="message" id="message" cols="30" rows="7" placeholder="Type your message..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="button button-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
         <!-- SECTION CONTACT -->
+
     </main>
     <!-- CONTENT MAIN -->
+
+    <footer>
+        <div class="container content-footer">
+            <div class="content-footer__left">
+                <a href="#home" class="logo">
+                    <h1>Adames</h1>
+                </a>
+                <div class="footer-social">
+                    <a href="#" class="footer-social__link" title="Github">
+                        <i class="uil uil-github-alt"></i>
+                    </a>
+                    <a href="#" class="footer-social__link" title="Linkedin">
+                        <i class="uil uil-linkedin-alt"></i>
+                    </a>
+                    <a href="#" class="footer-social__link" title="Gmail">
+                        <i class="uil uil-envelope-alt"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="content-footer__right">
+                <p>&copy; Argenis Adames. Developer Frontend 2025</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./assets/js/main.js"></script>
