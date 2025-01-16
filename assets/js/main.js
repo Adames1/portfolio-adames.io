@@ -1,15 +1,36 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Select the header, menu, and button
   const header = document.querySelector(".header");
-  const menu = document.querySelector(".nav-menu");
+  // const menu = document.querySelector(".nav-menu");
   const buttonMenu = document.querySelector(".button-menu");
   const swiperWrapper = document.querySelector(".swiper-wrapper");
+  const buttonDarkMode = document.querySelector(".button-dark--mode");
+  const menuLink = document.querySelectorAll(".nav-menu .nav-menu__link");
+
+  // Apply dark mode
+  buttonDarkMode.addEventListener("click", () => {
+    document.documentElement.classList.toggle("dark-mode");
+  });
 
   // Toggle the 'is-active' class for header and menu
   buttonMenu.addEventListener("click", () => {
     buttonMenu.classList.toggle("is-active");
     header.classList.toggle("is-active");
-    menu.classList.toggle("is-active");
+  });
+
+  // Toggle the 'is-active' class for header and menu II
+  menuLink.forEach((link) => {
+    link.addEventListener("click", () => {
+      buttonMenu.classList.remove("is-active");
+      header.classList.remove("is-active");
+    });
+  });
+
+  // Apply background to header with scroll
+  document.addEventListener("scroll", () => {
+    window.scrollY >= 200
+      ? header.classList.add("bg-color")
+      : header.classList.remove("bg-color");
   });
 
   // Initialize Swiper
@@ -53,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <h3>${item.nombre}</h3>
             <p>${item.descripcion}</p>
             <a href="#" class="swiper-slide__info--link">
-                <span>View project</span>
+                <span>Ver proyecto</span>
                 <i class="uil uil-external-link-alt"></i>
             </a>
         </div>
@@ -76,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const submitButton = document.querySelector(".button-submit");
       const originalButtonText = submitButton.textContent;
 
-      submitButton.textContent = "Sending Message...";
+      submitButton.textContent = "Enviando mensaje...";
       submitButton.disabled = true;
 
       emailjs
@@ -84,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .then((response) => {
           console.log("SUCCESS!", response.status, response.text);
 
-          submitButton.textContent = "Message Sent";
+          submitButton.textContent = "Mensaje enviado";
           submitButton.style.backgroundColor = "#08a208";
 
           this.reset();
