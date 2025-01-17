@@ -4,12 +4,38 @@ document.addEventListener("DOMContentLoaded", function () {
   // const menu = document.querySelector(".nav-menu");
   const buttonMenu = document.querySelector(".button-menu");
   const swiperWrapper = document.querySelector(".swiper-wrapper");
-  const buttonDarkMode = document.querySelector(".button-dark--mode");
   const menuLink = document.querySelectorAll(".nav-menu .nav-menu__link");
+  const buttonDarkMode = document.querySelector(".button-dark--mode");
+  const icon = buttonDarkMode.querySelector("i");
+
+  // maintain mode state
+  const savedMode = localStorage.getItem("theme");
+
+  if (savedMode === "dark") {
+    document.documentElement.classList.add("dark-mode");
+    icon.classList.add("uil-sun");
+    icon.classList.remove("uil-moon");
+  } else if (savedMode === "light") {
+    icon.classList.add("uil-moon");
+    icon.classList.remove("uil-sun");
+    document.documentElement.classList.remove("dark-mode");
+  }
 
   // Apply dark mode
   buttonDarkMode.addEventListener("click", () => {
     document.documentElement.classList.toggle("dark-mode");
+
+    if (icon.classList.contains("uil-moon")) {
+      icon.classList.add("uil-sun");
+      icon.classList.remove("uil-moon");
+      buttonDarkMode.title = "Light Mode";
+      localStorage.setItem("theme", "dark");
+    } else {
+      icon.classList.add("uil-moon");
+      icon.classList.remove("uil-sun");
+      buttonDarkMode.title = "Dark Mode";
+      localStorage.setItem("theme", "light");
+    }
   });
 
   // Toggle the 'is-active' class for header and menu
