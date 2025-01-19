@@ -1,11 +1,11 @@
 [
   {
     "id": 1,
-    "nombre": "Portafolio Personal",
-    "descripcion": "Un portafolio interactivo para mostrar proyectos y habilidades profesionales.",
-    "imagen": "./assets/img/portfolio-img.jpg",
-    "github": "https://github.com/usuario/portafolio-personal",
-    "link": "https://usuario.github.io/portafolio-personal/"
+    "nombre": "Landing Dropdown Navigation",
+    "descripcion": "Landing page con un diseño minimalista utilizando html, css y javascript.",
+    "imagen": "./assets/img/landing-page.jpg",
+    "github": "https://github.com/Adames1/dropdown-navigation",
+    "link": "https://landing-dropdown-navigation.netlify.app/"
   },
   {
     "id": 2,

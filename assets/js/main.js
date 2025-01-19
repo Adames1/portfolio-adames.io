@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="swiper-slide__info">
             <h3>${item.nombre}</h3>
             <p>${item.descripcion}</p>
-            <a href="#" class="swiper-slide__info--link">
+            <a href="${item.link}" class="swiper-slide__info--link" target="_blank" rel="noopener noreferrer"">
                 <span>Ver proyecto</span>
                 <i class="uil uil-external-link-alt"></i>
             </a>
