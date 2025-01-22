@@ -9,11 +9,11 @@
   },
   {
     "id": 2,
-    "nombre": "Gestor de Tareas",
-    "descripcion": "Aplicación web para gestionar tareas con funciones de agregar, editar y eliminar.",
-    "imagen": "./assets/img/portfolio-img.jpg",
-    "github": "https://github.com/usuario/gestor-tareas",
-    "link": "https://usuario.github.io/gestor-tareas/"
+    "nombre": "Lista de Productos con Carrito",
+    "descripcion": "Sencillo ecommerce con carrito de compras.",
+    "imagen": "./assets/img/list-product-with-cart.jpg",
+    "github": "https://github.com/Adames1/Product-list-with-cart",
+    "link": "https://list-with-cart.netlify.app/"
   },
   {
     "id": 3,
