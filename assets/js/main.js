@@ -52,6 +52,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // Apply class active for each section
+  window.addEventListener("scroll", () => {
+    const scrollPos = window.scrollY + 20;
+    const sections = document.querySelectorAll(".section");
+
+    sections.forEach((section) => {
+      if (
+        scrollPos > section.offsetTop &&
+        scrollPos < section.offsetTop + section.offsetHeight
+      ) {
+        menuLink.forEach((link) => link.classList.remove("active"));
+        document
+          .querySelector(`.header a[href*=${section.id}]`)
+          .classList.add("active");
+      }
+    });
+  });
+
   // Apply background to header with scroll
   document.addEventListener("scroll", () => {
     window.scrollY >= 200
