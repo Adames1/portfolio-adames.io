@@ -1,9 +1,11 @@
+import { projects } from "./projects.js";
+
 document.addEventListener("DOMContentLoaded", function () {
   // Select the header, menu, and button
   const header = document.querySelector(".header");
   // const menu = document.querySelector(".nav-menu");
   const buttonMenu = document.querySelector(".button-menu");
-  const swiperWrapper = document.querySelector(".swiper-wrapper");
+  const containerProjects = document.querySelector("#container-project");
   const menuLink = document.querySelectorAll(".nav-menu .nav-menu__link");
   const buttonDarkMode = document.querySelector(".button-dark--mode");
   const icon = buttonDarkMode.querySelector("i");
@@ -77,58 +79,35 @@ document.addEventListener("DOMContentLoaded", function () {
       : header.classList.remove("bg-color");
   });
 
-  // Initialize Swiper
-  var swiper = new Swiper(".mySwiper", {
-    rewind: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-
-  // fetch json projects
-  async function getprojects() {
-    const dataJson = "./projects.json";
-
-    try {
-      const response = await fetch(dataJson);
-      if (!response.ok) {
-        throw new Error("Data no found");
-      }
-
-      const data = await response.json();
-      return data;
-    } catch (error) {
-      console.error("Error", error);
-    }
-  }
-
   // show projects in DOM
-  async function uiProjects() {
-    const projects = await getprojects();
+  function renderProjects() {
+    projects.forEach((project) => {
+      let content = `
+      <div class="project" id="${project.id}">
+          <img src=${project.imagen} class="project__img" alt="${project.nombre}">
+          <div class="project__info">
+              <div class="project__info__text">
+                  <h3>${project.nombre}</h3>
+                  <p>${project.descripcion}</p>
+              </div>
+              <div class="project__info__techs">
+                  <h4>Tecnologias usadas:</h4>
+                  <ul>
+                      ${project.tecnologias.map((tech) => `<li>${tech}</li>`).join("")}
+                  </ul>
+              </div>
+              <div class="project__links">
+                  <a href=${project.link} target="_blank" rel="noopener noreferrer">Ver proyecto</a>
+                  <a href=${project.github} target="_blank" rel="noopener noreferrer">Ver código</a>
+              </div>
+          </div>
+      </div>`;
 
-    swiperWrapper.innerHTML = "";
-
-    projects.map((item) => {
-      const element = `<div class="swiper-slide">
-        <div class="swiper-slide__img">
-            <img src="${item.imagen}" alt="Image Project">
-        </div>
-        <div class="swiper-slide__info">
-            <h3>${item.nombre}</h3>
-            <p>${item.descripcion}</p>
-            <a href="${item.link}" class="swiper-slide__info--link" target="_blank" rel="noopener noreferrer"">
-                <span>Ver proyecto</span>
-                <i class="uil uil-external-link-alt"></i>
-            </a>
-        </div>
-    </div>`;
-
-      swiperWrapper.innerHTML += element;
+      containerProjects.innerHTML += content;
     });
   }
 
-  uiProjects();
+  renderProjects();
 
   // script emailjs
   emailjs.init("3_s2rcpMAsQqb1TFR");
