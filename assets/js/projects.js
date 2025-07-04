@@ -20,13 +20,13 @@ export const projects = [
   },
   {
     id: 3,
-    nombre: "Tienda en Línea",
+    nombre: "LensLog",
     descripcion:
-      "Un ecommerce sencillo con carrito de compras y pasarela de pago simulada.",
-    imagen: "./assets/img/portfolio-img.jpg",
-    github: "https://github.com/usuario/tienda-en-linea",
-    link: "https://usuario.github.io/tienda-en-linea/",
-    tecnologias: ["HTML", "CSS", "JavaScript"],
+      "Galeria de fotos con login y registro. Utilizando React y Firebase, y un diseño responsive y minimalista.",
+    imagen: "./assets/img/lenslog-web.png",
+    github: "https://github.com/Adames1/lenslog-app",
+    link: "https://lenslog.netlify.app/",
+    tecnologias: ["React, Tailwindcss, Firebase"],
   },
   {
     id: 4,
