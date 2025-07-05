@@ -22,11 +22,11 @@ export const projects = [
     id: 3,
     nombre: "LensLog",
     descripcion:
-      "Galeria de fotos con login y registro. Utilizando React y Firebase, y un diseño responsive y minimalista.",
+      "Galeria de fotos con login y registro. Utilizando React y Supabase, y un diseño responsive y minimalista.",
     imagen: "./assets/img/lenslog-web.png",
     github: "https://github.com/Adames1/lenslog-app",
     link: "https://lenslog.netlify.app/",
-    tecnologias: ["React, Tailwindcss, Firebase"],
+    tecnologias: ["React, Tailwindcss, Supabase"],
   },
   {
     id: 4,
