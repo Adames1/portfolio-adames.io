@@ -7,7 +7,7 @@ export const projects = [
     imagen: "./assets/img/landing-page.jpg",
     github: "https://github.com/Adames1/dropdown-navigation",
     link: "https://landing-dropdown-navigation.netlify.app/",
-    tecnologias: ["HTML", "CSS", "JavaScript"],
+    tecnologias: ["HTML, CSS, JavaScript"],
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ export const projects = [
     imagen: "./assets/img/list-product-with-cart.jpg",
     github: "https://github.com/Adames1/Product-list-with-cart",
     link: "https://list-with-cart.netlify.app/",
-    tecnologias: ["HTML", "CSS", "JavaScript"],
+    tecnologias: ["HTML, CSS, JavaScript"],
   },
   {
     id: 3,
@@ -30,13 +30,13 @@ export const projects = [
   },
   {
     id: 4,
-    nombre: "Blog Personal",
+    nombre: "Poke App",
     descripcion:
-      "Plataforma para compartir artículos personales con un diseño minimalista.",
-    imagen: "./assets/img/portfolio-img.jpg",
-    github: "https://github.com/usuario/blog-personal",
-    link: "https://usuario.github.io/blog-personal/",
-    tecnologias: ["HTML", "CSS", "JavaScript"],
+      "Explora Pokémon con una Pokédex limpia, responsive y hecha en React.",
+    imagen: "./assets/img/project-poke-app.png",
+    github: "https://github.com/Adames1/pokeapp-react",
+    link: "https://poke-app-734ca8.netlify.app/",
+    tecnologias: ["React, Tailwindcss, Pokeapi"],
   },
   {
     id: 5,

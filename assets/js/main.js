@@ -84,7 +84,9 @@ document.addEventListener("DOMContentLoaded", function () {
     projects.forEach((project) => {
       let content = `
       <div class="project" id="${project.id}">
-          <img src=${project.imagen} class="project__img" alt="${project.nombre}">
+          <img src=${project.imagen} class="project__img" alt="${
+        project.nombre
+      }">
           <div class="project__info">
               <div class="project__info__text">
                   <h3>${project.nombre}</h3>
@@ -93,12 +95,18 @@ document.addEventListener("DOMContentLoaded", function () {
               <div class="project__info__techs">
                   <h4>Tecnologias usadas:</h4>
                   <ul>
-                      ${project.tecnologias.map((tech) => `<li>${tech}</li>`).join("")}
+                      ${project.tecnologias
+                        .map((tech) => `<li>${tech}</li>`)
+                        .join("")}
                   </ul>
               </div>
               <div class="project__links">
-                  <a href=${project.link} target="_blank" rel="noopener noreferrer">Ver proyecto</a>
-                  <a href=${project.github} target="_blank" rel="noopener noreferrer">Ver código</a>
+                  <a href=${
+                    project.link
+                  } target="_blank" rel="noopener noreferrer">Ver proyecto</a>
+                  <a href=${
+                    project.github
+                  } target="_blank" rel="noopener noreferrer">Ver código</a>
               </div>
           </div>
       </div>`;
