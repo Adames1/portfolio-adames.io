@@ -40,13 +40,13 @@ export const projects = [
   },
   {
     id: 5,
-    nombre: "Juego de Memoria",
+    nombre: "Taskit Manage",
     descripcion:
-      "Un juego interactivo para mejorar la memoria visual utilizando JavaScript.",
-    imagen: "./assets/img/portfolio-img.jpg",
-    github: "https://github.com/usuario/juego-memoria",
-    link: "https://usuario.github.io/juego-memoria/",
-    tecnologias: ["HTML", "CSS", "JavaScript"],
+      "Una aplicación web para la gestión de tareas, desarrollada con React y Firebase.",
+    imagen: "./assets/img/taskit-tasks.png",
+    github: "https://github.com/Adames1/Taskit",
+    link: "https://taskit-manage.netlify.app/signin",
+    tecnologias: ["REACT, FIREBASE, REACT ROUTER"],
   },
   {
     id: 6,
