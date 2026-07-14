@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Adames</title>
+    <meta name="description" content="Portafolio de Argenis Adames, desarrollador frontend junior especializado en interfaces web con React y JavaScript.">
+    <title>Argenis Adames · Desarrollador Frontend</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
     <header class="header">
         <nav class="container">
             <a href="#home" class="logo">
-                <h1>Adames</h1>
+                <h1>adames<span class="logo__dot">.</span></h1>
             </a>
             <ul class="nav-menu">
                 <li class="nav-menu__item">
@@ -52,31 +52,31 @@
         <!-- SECTION HERO -->
         <section id="home" class="section section-home">
             <div class="container content-home">
-                <svg class="blob-img" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <mask id="mask0" mask-type="alpha">
-                        <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                                        130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                                        97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                                        0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
-                    </mask>
-                    <g mask="url(#mask0)">
-                        <path
-                            d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                                        165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                                        129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                                        -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
-                        <image href="./assets/img/argenis_adames.png" x="5" y="8" alt="Profile Image" />
-                    </g>
-                </svg>
+
+                <div class="hero-photo">
+                    <span class="hero-photo__bracket hero-photo__bracket--tl" aria-hidden="true">&lt;</span>
+                    <div class="hero-photo__frame">
+                        <img src="./assets/img/argenis_adames.png" alt="Foto de Argenis Adames" class="hero-photo__img">
+                    </div>
+                    <span class="hero-photo__bracket hero-photo__bracket--br" aria-hidden="true">/&gt;</span>
+                </div>
 
                 <!-- Info Section -->
                 <div class="section-home__info">
+                    <span class="eyebrow">Desarrollador frontend junior</span>
                     <h2>Argenis Adames</h2>
-                    <span>Desarrollador Frontend</span>
+
+                    <div class="hero-code" aria-hidden="true">
+                        <p><span class="tok-kw">const</span> developer = {</p>
+                        <p>&nbsp;&nbsp;stack: <span class="tok-str">"React, JS, CSS"</span>,</p>
+                        <p>&nbsp;&nbsp;base: <span class="tok-str">"Santo Domingo, DO"</span>,</p>
+                        <p>&nbsp;&nbsp;disponible: <span class="tok-kw">true</span>,</p>
+                        <p>};</p>
+                    </div>
+
                     <div class="section-home__buttons">
                         <a href="#projects" class="button button__view">Ver mi trabajo</a>
-                        <a href="#contact" class="button button__contact">Contáctame</a>
+                        <a href="./assets/cv/Argenis-Adames-CV.pdf" class="button button__contact" download>Descargar CV</a>
                     </div>
                 </div>
             </div>
@@ -94,20 +94,18 @@
         <!-- SECTION ABOUT -->
         <section id="about" class="section section-about">
             <div class="container content-about">
-                <div class="content-about__info">
-                    <h2 class="title">Sobre Mi</h2>
+                <div class="content-about__info reveal">
                     <span class="subtitle">Mi introducción</span>
+                    <h2 class="title">Sobre mí</h2>
                     <p class="description">Hola, mi nombre es Argenis Adames, desarrollador frontend junior. Me
-                        apasiona
-                        crear interfaces dinámicas y funcionales que mejoren la experiencia de los usuarios. Siempre
-                        busco
-                        superar mis límites aprendiendo nuevas tecnologías y aplicándolas en proyectos desafiantes. <br>
-                        <br>
-
+                        apasiona crear interfaces dinámicas y funcionales que mejoren la experiencia de los
+                        usuarios. Siempre busco superar mis límites aprendiendo nuevas tecnologías y aplicándolas
+                        en proyectos desafiantes.
+                        <br><br>
                         Me esfuerzo por mantenerme al día con las tendencias más recientes en el desarrollo web,
-                        combinando creatividad y habilidad técnica. Mi objetivo es aportar valor con cada línea de
-                        código que
-                        escribo, construyendo soluciones que sean tanto efectivas como visualmente atractivas.
+                        combinando creatividad y habilidad técnica. Mi objetivo es aportar valor con cada línea
+                        de código que escribo, construyendo soluciones que sean tanto efectivas como visualmente
+                        atractivas.
                     </p>
 
                     <div class="about-social">
@@ -119,15 +117,30 @@
                             title="Linkedin" target="_blank" rel="noopener noreferrer">
                             <i class="uil uil-linkedin-alt"></i>
                         </a>
-                        <a href="https://www.instagram.com/argenis_adames/profilecard/?igsh=cmcwemx4ZTRldzJh "
+                        <a href="https://www.instagram.com/argenis_adames/profilecard/?igsh=cmcwemx4ZTRldzJh"
                             class="about-social__link" title="Instagram" target="_blank" rel="noopener noreferrer">
                             <i class="uil uil-instagram"></i>
                         </a>
                     </div>
                 </div>
 
-                <div class="about-img">
-                    <img src="./assets/img/argenis_adames.png" alt="Profile Image" class="about-photo">
+                <div class="about-facts reveal">
+                    <div class="about-facts__item">
+                        <span class="about-facts__label">// enfoque</span>
+                        <p>Interfaces limpias, accesibles y responsive.</p>
+                    </div>
+                    <div class="about-facts__item">
+                        <span class="about-facts__label">// stack principal</span>
+                        <p>React, JavaScript, CSS y Tailwind.</p>
+                    </div>
+                    <div class="about-facts__item">
+                        <span class="about-facts__label">// ahora mismo</span>
+                        <p>Aprendiendo TypeScript y Next.js.</p>
+                    </div>
+                    <div class="about-facts__item">
+                        <span class="about-facts__label">// ubicación</span>
+                        <p>Santo Domingo, República Dominicana.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -136,89 +149,49 @@
         <!-- SECTION SKILLS -->
         <section id="skills" class="section section-skills">
             <div class="container content-skills">
-                <div class="content-skills__info">
-                    <h2 class="title">Mis Habilidades</h2>
+                <div class="content-skills__info reveal">
                     <span class="subtitle">Tecnologías</span>
+                    <h2 class="title">Mis habilidades</h2>
                 </div>
 
                 <div class="container-skills">
-                    <div class="technologies-learned">
-                        <h4>Tecnologías Aprendidas:</h4>
-                        <div class="cards-skills">
-                            <div class="card-skill">
-                                <h3>HMTL</h3>
-                            </div>
-                            <div class="card-skill">
-                                <h3>CSS</h3>
-                            </div>
-                            <div class="card-skill">
-                                <h3>JAVASCRIPT</h3>
-                            </div>
-                            <div class="card-skill">
-                                <h3>GIT</h3>
-                            </div>
-                            <div class="card-skill">
-                                <h3>TAILWIND</h3>
-                            </div>
-                            <div class="card-skill">
-                                <h3>REACT</h3>
-                            </div>
+                    <div class="skills-group reveal">
+                        <h4><i class="uil uil-check-circle"></i> Ya domino</h4>
+                        <div class="pills">
+                            <span class="pill pill--filled">HTML</span>
+                            <span class="pill pill--filled">CSS</span>
+                            <span class="pill pill--filled">JavaScript</span>
+                            <span class="pill pill--filled">Git</span>
+                            <span class="pill pill--filled">Tailwind</span>
+                            <span class="pill pill--filled">React</span>
                         </div>
                     </div>
 
-                    <div class="technologies-tolearn">
-                        <h4>Aprendiendo Tecnologías:</h4>
-                        <div class="cards-skills">
-                            <div class="card-skill">
-                                <h3>TYPESCRIPT</h3>
-                            </div>
-                            <div class="card-skill">
-                                <h3>NEXTJS</h3>
-                            </div>
-                            <div class="card-skill">
-                                <h3>REACT NATIVE</h3>
-                            </div>
-                            <div class="card-skill">
-                                <h3>FLUTTER</h3>
-                            </div>
+                    <div class="skills-group reveal">
+                        <h4><i class="uil uil-arrow-growth"></i> Aprendiendo</h4>
+                        <div class="pills">
+                            <span class="pill pill--outline">TypeScript</span>
+                            <span class="pill pill--outline">Next.js</span>
+                            <span class="pill pill--outline">React Native</span>
+                            <span class="pill pill--outline">Flutter</span>
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
         <!-- SECTION SKILLS -->
 
         <!-- SECTION PROJECTS -->
         <section id="projects" class="section section-portfolio">
             <div class="container content-portfolio">
-                <div class="content-portfolio__info">
-                    <h2 class="title">Mi Portafolio</h2>
+                <div class="content-portfolio__info reveal">
                     <span class="subtitle">Proyectos listos</span>
+                    <h2 class="title">Mi portafolio</h2>
                 </div>
 
                 <!-- projects here -->
                 <div class="projects" id="container-project">
-                    <!-- <div class="project">
-                        <img src="./assets/img/portfolio-img.jpg" class="project__img" alt="Image de proyecto">
-                        <div class="project__info">
-                            <div class="project__info__text">
-                                <h3>Proyecto 1</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                            </div>
-                            <div class="project__info__techs">
-                                <h4>Tecnologias usadas:</h4>
-                                <ul>
-                                    <li>HTML</li>
-                                    <li>CSS</li>
-                                    <li>JAVASCRIPT</li>
-                                </ul>
-                            </div>
-                            <div class="project__links">
-                                <a href="#">Ver proyecto</a>
-                                <a href="#">Ver código</a>
-                            </div>
-                        </div>
-                    </div> -->
-                    <!-- add more projects here -->
+                    <!-- generated by main.js from projects.js -->
                 </div>
             </div>
         </section>
@@ -226,28 +199,34 @@
 
         <!-- SECTION CONTACT -->
         <section id="contact" class="section section-contact">
-            <div class="container content-contact">
-                <div class="content-contact__info">
-                    <h2 class="title">Ponte En Contacto</h2>
-                    <span class="subtitle">A tu disposición</span>
+            <div class="container content-contact reveal">
+                <span class="subtitle">A tu disposición</span>
+                <h2 class="title">Hablemos</h2>
+                <p class="description">¿Tienes un proyecto en mente o una oportunidad para un frontend junior?
+                    Descarga mi CV o escríbeme directamente, con gusto responderé.</p>
+
+                <div class="contact-actions">
+                    <a href="./assets/cv/Argenis-Adames-CV.pdf" class="button button__view" download>
+                        <i class="uil uil-file-download-alt"></i> Descargar CV
+                    </a>
+                    <a href="mailto:argenis.adames@example.com" class="button button__contact">
+                        <i class="uil uil-envelope"></i> Enviar correo
+                    </a>
                 </div>
-                <div class="content-form">
-                    <form id="myForm">
-                        <div class="group-input">
-                            <label for="name">Tú nombre</label>
-                            <input type="text" name="name" id="name" placeholder="Escribe tú nombre..." required>
-                        </div>
-                        <div class="group-input">
-                            <label for="email">Tú correo</label>
-                            <input type="email" name="email" id="email" placeholder="Escribe tú correo..." required>
-                        </div>
-                        <div class="group-input">
-                            <label for="message">Tú mensaje</label>
-                            <textarea name="message" id="message" cols="30" rows="7" placeholder="Escribe tú mensaje..."
-                                required></textarea>
-                        </div>
-                        <button type="submit" class="button button-submit">Enviar mensaje</button>
-                    </form>
+
+                <div class="about-social contact-social">
+                    <a href="https://github.com/Adames1" class="about-social__link" title="Github" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="uil uil-github-alt"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/argenis-adames-98173a222/" class="about-social__link"
+                        title="Linkedin" target="_blank" rel="noopener noreferrer">
+                        <i class="uil uil-linkedin-alt"></i>
+                    </a>
+                    <a href="https://www.instagram.com/argenis_adames/profilecard/?igsh=cmcwemx4ZTRldzJh"
+                        class="about-social__link" title="Instagram" target="_blank" rel="noopener noreferrer">
+                        <i class="uil uil-instagram"></i>
+                    </a>
                 </div>
             </div>
         </section>
@@ -260,7 +239,7 @@
         <div class="container content-footer">
             <div class="content-footer__left">
                 <a href="#home" class="logo">
-                    <h1>Adames</h1>
+                    <h1>adames<span class="logo__dot">.</span></h1>
                 </a>
                 <div class="footer-social">
                     <a href="https://github.com/Adames1" class="footer-social__link" title="Github" target="_blank"
@@ -271,24 +250,23 @@
                         title="Linkedin" target="_blank" rel="noopener noreferrer">
                         <i class="uil uil-linkedin-alt"></i>
                     </a>
-                    <a href="https://www.instagram.com/argenis_adames/profilecard/?igsh=cmcwemx4ZTRldzJh "
+                    <a href="https://www.instagram.com/argenis_adames/profilecard/?igsh=cmcwemx4ZTRldzJh"
                         class="footer-social__link" title="Instagram" target="_blank" rel="noopener noreferrer">
                         <i class="uil uil-instagram"></i>
                     </a>
                 </div>
             </div>
             <div class="content-footer__right">
-                <p>&copy; Argenis Adames. Developer Frontend 2025</p>
+                <p>&copy; Argenis Adames. Developer Frontend 2026</p>
             </div>
         </div>
     </footer>
 
     <!-- BUTTON DARK MODE -->
-    <button type="button" title="Dark Mode" class="button-dark--mode">
+    <button type="button" title="Dark Mode" class="button-dark--mode" aria-label="Alternar modo oscuro">
         <i class="uil uil-moon"></i>
     </button>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="./assets/js/main.js"></script>
 </body>
 

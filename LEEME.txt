@@ -1,0 +1,17 @@
+Antes de publicar, reemplaza estos 3 placeholders:
+
+1. assets/img/  -> vuelve a colocar tus imágenes reales (argenis_adames.png,
+   landing-page.jpg, list-product-with-cart.jpg, lenslog-web.png,
+   project-poke-app.png, taskit-tasks.png, portfolio-img.jpg).
+   No se subieron en esta conversación, así que no están incluidas aquí.
+
+2. assets/cv/Argenis-Adames-CV.pdf -> coloca aquí tu CV en PDF con ese
+   nombre exacto (o cambia la ruta en index.html si prefieres otro nombre).
+
+3. index.html, sección #contact -> el correo "argenis.adames@example.com"
+   es un placeholder, cámbialo por tu correo real.
+
+4. assets/js/projects.js, proyecto "Clima en Tiempo Real" -> el github y
+   el link todavía apuntan a "usuario/clima-tiempo-real" (placeholder del
+   archivo original). Actualízalo con la URL real o elimina el proyecto
+   si aún no está listo.
