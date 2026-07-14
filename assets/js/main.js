@@ -1,16 +1,17 @@
 import { projects } from "./projects.js";
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Select the header, menu, and button
   const header = document.querySelector(".header");
-  // const menu = document.querySelector(".nav-menu");
   const buttonMenu = document.querySelector(".button-menu");
   const containerProjects = document.querySelector("#container-project");
   const menuLink = document.querySelectorAll(".nav-menu .nav-menu__link");
   const buttonDarkMode = document.querySelector(".button-dark--mode");
   const icon = buttonDarkMode.querySelector("i");
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
 
-  // maintain mode state
+  // Mantener el modo (claro/oscuro) elegido por el usuario
   const savedMode = localStorage.getItem("theme");
 
   if (savedMode === "dark") {
@@ -23,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.documentElement.classList.remove("dark-mode");
   }
 
-  // Apply dark mode
   buttonDarkMode.addEventListener("click", () => {
     document.documentElement.classList.toggle("dark-mode");
 
@@ -40,13 +40,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Toggle the 'is-active' class for header and menu
+  // Menú móvil
   buttonMenu.addEventListener("click", () => {
     buttonMenu.classList.toggle("is-active");
     header.classList.toggle("is-active");
   });
 
-  // Toggle the 'is-active' class for header and menu II
   menuLink.forEach((link) => {
     link.addEventListener("click", () => {
       buttonMenu.classList.remove("is-active");
@@ -54,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Apply class active for each section
+  // Resaltar el enlace de navegación de la sección visible
   window.addEventListener("scroll", () => {
     const scrollPos = window.scrollY + 20;
     const sections = document.querySelectorAll(".section");
@@ -72,86 +71,69 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Apply background to header with scroll
+  // Fondo del header al hacer scroll
   document.addEventListener("scroll", () => {
     window.scrollY >= 200
       ? header.classList.add("bg-color")
       : header.classList.remove("bg-color");
   });
 
-  // show projects in DOM
+  // Renderizar proyectos en el DOM
   function renderProjects() {
-    projects.forEach((project) => {
-      let content = `
-      <div class="project" id="${project.id}">
-          <img src=${project.imagen} class="project__img" alt="${
-        project.nombre
-      }">
+    const markup = projects
+      .map((project) => {
+        const links = project.proximamente
+          ? `<span class="project__badge">Próximamente</span>`
+          : `<div class="project__links">
+                <a href="${project.link}" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
+                <a href="${project.github}" target="_blank" rel="noopener noreferrer">Ver código</a>
+             </div>`;
+
+        return `
+      <div class="project ${project.proximamente ? "project--upcoming" : ""}" id="project-${project.id}">
+          <img src="${project.imagen}" class="project__img" alt="${project.nombre}" loading="lazy">
           <div class="project__info">
               <div class="project__info__text">
                   <h3>${project.nombre}</h3>
                   <p>${project.descripcion}</p>
               </div>
               <div class="project__info__techs">
-                  <h4>Tecnologias usadas:</h4>
+                  <h4>Tecnologías usadas:</h4>
                   <ul>
                       ${project.tecnologias
                         .map((tech) => `<li>${tech}</li>`)
                         .join("")}
                   </ul>
               </div>
-              <div class="project__links">
-                  <a href=${
-                    project.link
-                  } target="_blank" rel="noopener noreferrer">Ver proyecto</a>
-                  <a href=${
-                    project.github
-                  } target="_blank" rel="noopener noreferrer">Ver código</a>
-              </div>
+              ${links}
           </div>
       </div>`;
+      })
+      .join("");
 
-      containerProjects.innerHTML += content;
-    });
+    containerProjects.innerHTML = markup;
   }
 
   renderProjects();
 
-  // script emailjs
-  emailjs.init("3_s2rcpMAsQqb1TFR");
+  // Animación de aparición al hacer scroll (respeta "reduce motion")
+  const revealTargets = document.querySelectorAll(".reveal");
 
-  document
-    .getElementById("myForm")
-    .addEventListener("submit", function (event) {
-      event.preventDefault(); // Evitar recargar la página
-
-      const submitButton = document.querySelector(".button-submit");
-      const originalButtonText = submitButton.textContent;
-
-      submitButton.textContent = "Enviando mensaje...";
-      submitButton.disabled = true;
-
-      emailjs
-        .sendForm("service_y70q27h", "template_hg3o5ol", this)
-        .then((response) => {
-          console.log("SUCCESS!", response.status, response.text);
-
-          submitButton.textContent = "Mensaje enviado";
-          submitButton.style.backgroundColor = "#08a208";
-
-          this.reset();
-
-          setTimeout(() => {
-            submitButton.textContent = originalButtonText;
-            submitButton.disabled = false;
-            submitButton.style.backgroundColor = ""; // Restaurar el color original del botón
-          }, 3000);
-        })
-        .catch((error) => {
-          console.log("FAILED...", error);
-
-          submitButton.textContent = originalButtonText;
-          submitButton.disabled = false;
+  if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+    revealTargets.forEach((el) => el.classList.add("is-visible"));
+  } else {
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
         });
-    });
+      },
+      { threshold: 0.15 }
+    );
+
+    revealTargets.forEach((el) => revealObserver.observe(el));
+  }
 });

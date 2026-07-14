@@ -1,0 +1,14 @@
+<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="250" fill="#14201c"/>
+  <g opacity="0.15" stroke="#dce7e2" stroke-width="1">
+    <line x1="0" y1="62.5" x2="400" y2="62.5"/>
+    <line x1="0" y1="125" x2="400" y2="125"/>
+    <line x1="0" y1="187.5" x2="400" y2="187.5"/>
+    <line x1="100" y1="0" x2="100" y2="250"/>
+    <line x1="200" y1="0" x2="200" y2="250"/>
+    <line x1="300" y1="0" x2="300" y2="250"/>
+  </g>
+  <circle cx="200" cy="125" r="70" fill="none" stroke="#2f6f5e" stroke-width="2" opacity="0.6"/>
+  <text x="200" y="140" font-family="'IBM Plex Mono', monospace" font-size="34" font-weight="500"
+        text-anchor="middle" fill="#e0b876">&lt;/&gt;</text>
+</svg>
