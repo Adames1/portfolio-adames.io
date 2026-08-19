@@ -1,14 +1,14 @@
 export const projects = [
   {
     id: 1,
-    nombre: "Consumo de REST API",
+    nombre: "Tasks TS Project",
     descripcion:
-      "Proyecto donde practicaré el consumo de una API REST pública: peticiones fetch, manejo de estados de carga/error y renderizado dinámico de datos.",
-    imagen: "./assets/img/project-placeholder.svg",
-    github: "",
-    link: "",
-    tecnologias: ["JavaScript", "Fetch API", "CSS"],
-    proximamente: true,
+      "Proyecto para almacenar en localstorage tareas. Se utiliza TypeScript y Tailwind para el diseño y estado de la aplicación. Además, se utiliza Zustand para el estado centralizado de la aplicación.",
+    imagen: "./assets/img/tasks-ts-project.png",
+    github: "https://github.com/Adames1/tasks-ts",
+    link: "https://task-ts-project.netlify.app/",
+    tecnologias: ["React", "TypeScript", "Tailwind", "Zustand"],
+    proximamente: false,
   },
   {
     id: 2,
