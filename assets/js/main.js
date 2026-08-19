@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const buttonDarkMode = document.querySelector(".button-dark--mode");
   const icon = buttonDarkMode.querySelector("i");
   const prefersReducedMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
+    "(prefers-reduced-motion: reduce)",
   ).matches;
 
   // Mantener el modo (claro/oscuro) elegido por el usuario
@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
       },
-      { threshold: 0.15 }
+      { threshold: 0.15 },
     );
 
     revealTargets.forEach((el) => revealObserver.observe(el));

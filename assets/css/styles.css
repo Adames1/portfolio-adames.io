@@ -113,7 +113,9 @@ body {
   color: var(--text-color);
   margin: 0;
   overflow-x: hidden;
-  transition: background-color var(--transition), color var(--transition);
+  transition:
+    background-color var(--transition),
+    color var(--transition);
 }
 
 .container {
@@ -171,7 +173,9 @@ body {
 .reveal {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
 }
 
 .reveal.is-visible {
@@ -276,7 +280,9 @@ nav .logo h1 {
   height: 3px;
   background-color: var(--text-color);
   margin: 3px 0;
-  transition: transform var(--transition), opacity var(--transition);
+  transition:
+    transform var(--transition),
+    opacity var(--transition);
 }
 
 .button-menu.is-active .button-menu__line:nth-child(1) {
@@ -427,7 +433,9 @@ nav .logo h1 {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  transition: opacity 0.3s, color var(--transition);
+  transition:
+    opacity 0.3s,
+    color var(--transition);
 }
 
 .scrolldown--button:hover {

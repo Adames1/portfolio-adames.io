@@ -3,7 +3,7 @@ export const projects = [
     id: 1,
     nombre: "Tasks TS Project",
     descripcion:
-      "Proyecto para almacenar en localstorage tareas. Se utiliza TypeScript y Tailwind para el diseño y estado de la aplicación. Además, se utiliza Zustand para el estado centralizado de la aplicación.",
+      "Proyecto para almacenar en localstorage tareas. Utiliza TypeScript y Tailwind para el diseño y estado de la aplicación.",
     imagen: "./assets/img/tasks-ts-project.png",
     github: "https://github.com/Adames1/tasks-ts",
     link: "https://task-ts-project.netlify.app/",
