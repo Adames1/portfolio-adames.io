@@ -12,14 +12,14 @@ export const projects = [
   },
   {
     id: 2,
-    nombre: "Maquetación desde diseño",
+    nombre: "Pokedex React+Typescript",
     descripcion:
-      "Práctica de maquetación fiel a un diseño (Figma), enfocada en semántica HTML, layout responsive y precisión visual.",
-    imagen: "./assets/img/project-placeholder.svg",
-    github: "",
-    link: "",
-    tecnologias: ["HTML", "CSS", "Responsive Design"],
-    proximamente: true,
+      "Este es un proyecto de Pokedex utilizando React y TypeScript. Tiene un diseño responsive.",
+    imagen: "./assets/img/pokedex-project.png",
+    github: "https://github.com/Adames1/pokedex-ts",
+    link: "https://pokedex-with-ts.netlify.app/",
+    tecnologias: ["React", "TypeScript", "Tailwind", "Zustand"],
+    proximamente: false,
   },
   {
     id: 3,
